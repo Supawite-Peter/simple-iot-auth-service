@@ -42,3 +42,9 @@ $ npm run start:prod
 # unit tests
 $ npm run test
 ```
+
+## Docker
+
+```bash
+docker build -t simple-iot-auth-service:{tag} .
+```
