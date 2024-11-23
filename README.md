@@ -6,7 +6,7 @@ A microservice for simple iot backend handling authorization.
 
 ## Planning Features
 
-- :black_square_button: Dockerize
+- :white_check_mark: Dockerize
 - :black_square_button: JWT Refresh/Access Token
 
 ## Requirements
@@ -41,4 +41,10 @@ $ npm run start:prod
 ```bash
 # unit tests
 $ npm run test
+```
+
+## Docker
+
+```bash
+docker build -t simple-iot-auth-service:{tag} .
 ```
