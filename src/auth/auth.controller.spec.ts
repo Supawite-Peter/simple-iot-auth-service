@@ -37,6 +37,7 @@ describe('AuthController', () => {
       const input = {
         userId: 1,
         username: 'abc',
+        type: 'access',
       };
       serviceMock.stubSignToken = 'token';
 
@@ -53,6 +54,7 @@ describe('AuthController', () => {
       const input = {
         userId: 1,
         username: 'abc',
+        type: 'access',
       };
       jest
         .spyOn(service, 'signToken')
@@ -70,6 +72,7 @@ describe('AuthController', () => {
       // Arrange
       const input = {
         token: 'token',
+        type: 'access',
       };
       serviceMock.stubVerifyToken = { sub: 1, username: 'abc' };
 
@@ -85,6 +88,7 @@ describe('AuthController', () => {
       // Arrange
       const input = {
         token: 'token',
+        type: 'access',
       };
       jest
         .spyOn(service, 'verifyToken')

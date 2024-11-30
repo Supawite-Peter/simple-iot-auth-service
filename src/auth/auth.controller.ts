@@ -7,12 +7,23 @@ export class AuthController {
   constructor(private authService: AuthService) {}
 
   @MessagePattern({ cmd: 'auth.token.sign' })
-  sign(@Payload() { userId, username }: { userId: number; username: string }) {
-    return this.authService.signToken(userId, username);
+  sign(
+    @Payload()
+    {
+      userId,
+      username,
+      type,
+    }: {
+      userId: number;
+      username: string;
+      type: string;
+    },
+  ) {
+    return this.authService.signToken(userId, username, type);
   }
 
   @MessagePattern({ cmd: 'auth.token.verify' })
-  verify(@Payload() { token }: { token: string }) {
-    return this.authService.verifyToken(token);
+  verify(@Payload() { token, type }: { token: string; type: string }) {
+    return this.authService.verifyToken(token, type);
   }
 }
