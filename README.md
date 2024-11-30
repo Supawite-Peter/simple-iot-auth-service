@@ -7,7 +7,7 @@ A microservice for simple iot backend handling authorization.
 ## Planning Features
 
 - :white_check_mark: Dockerize
-- :black_square_button: JWT Refresh/Access Token
+- :white_check_mark: JWT Refresh/Access Token
 
 ## Requirements
 
